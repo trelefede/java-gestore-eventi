@@ -40,7 +40,7 @@ public class Main {
 		System.out.println("Vuoi prenotare dei posti? s/n");
 		String s = sc.nextLine();
 		if (s.equalsIgnoreCase("n")) {
-			System.out.println("fine");
+			System.out.println("Saluti");
 		} else if (s.equalsIgnoreCase("s")) {
 			System.out.println("Quanti posti vuoi prenotare?");
 			int nPosti = sc.nextInt();
@@ -58,7 +58,7 @@ public class Main {
 		System.out.println("Vuoi disdire dei posti? s/n");
 		String t = sc.nextLine();
 		if (t.equalsIgnoreCase("n")) {
-			System.out.println("fine");
+			System.out.println("Saluti");
 		} else if (t.equalsIgnoreCase("s")) {
 			System.out.println("Quanti posti vuoi disdire?");
 			int nPosti = sc.nextInt();

@@ -88,8 +88,8 @@ public class Evento {
 		this.postiTotali = postiTotali;
 	}
 
-	// formattazione data
-	private String formatData(LocalDate data) {
+	// formattazione
+	public String formatData(LocalDate data) {
 		DateTimeFormatter form = DateTimeFormatter.ofPattern("dd-MMM-yyyy");
 		String dataForm = data.format(form);
 		return dataForm;
