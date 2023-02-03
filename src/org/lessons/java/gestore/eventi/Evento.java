@@ -9,7 +9,6 @@ public class Evento {
 	private LocalDate data;
 	private int postiTotali;
 	private int postiPrenotati = 0;
-	private String dataForm = formatData(data);
 
 	public Evento(String titolo, LocalDate data, int postiTotali) throws Exception {
 		validateTitolo(titolo);
@@ -92,7 +91,7 @@ public class Evento {
 
 	@Override
 	public String toString() {
-		return "Data: " + dataForm + "\n" + "Evento: " + titolo;
+		return "Data: " + formatData(data) + "\n" + "Evento: " + titolo;
 	}
 
 }
