@@ -42,22 +42,28 @@ public class Evento {
 	}
 
 	// metodi prenota/disdici
-	public void prenota() throws Exception {
+	public void prenota(int n) throws Exception {
 		if (data.isBefore(LocalDate.now())) {
 			throw new Exception("I viaggi nel tempo ancora non esistono! L'evento non è più disponibile!");
 		} else if (postiPrenotati == postiTotali) {
 			throw new Exception("Posti terminati per questo evento");
 		}
-		this.postiPrenotati = this.postiPrenotati + 1;
+		this.postiPrenotati = this.postiPrenotati + n;
 	}
 
-	public void disdici() throws Exception {
+	public void disdici(int n) throws Exception {
 		if (postiPrenotati == 0) {
 			throw new Exception("Nessuna prenotazione trovata");
 		} else if (data.isBefore(LocalDate.now())) {
 			throw new Exception("I viaggi nel tempo ancora non esistono! L'evento non è più disponibile!");
 		}
-		this.postiPrenotati = this.postiPrenotati - 1;
+		this.postiPrenotati = this.postiPrenotati - n;
+	}
+
+	// metodo posti disponibili
+	public int postiDisponibili() {
+		int disponibili = this.postiTotali - this.postiPrenotati;
+		return disponibili;
 	}
 
 	// validations
